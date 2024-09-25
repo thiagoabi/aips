@@ -1,0 +1,8 @@
+{
+  "name": "Aips",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

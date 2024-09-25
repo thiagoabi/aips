@@ -1,0 +1,329 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "orderby": 1,
+      "question": "Você sabe o que é o vírus da AIDS (H.I.V)?",
+      "multiple": false,
+      "next": 2,
+      "aswers": [
+        {
+          "id": 1,
+          "orderby": 1,
+          "value": "Nunca ouvir falar",
+          "weight": 0
+        },
+        {
+          "id": 2,
+          "orderby": 2,
+          "value": "Sei algumas coisas",
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "orderby": 3,
+          "value": "Sei tudo",
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "orderby": 2,
+      "question": "Por que decidiu fazer está pesquisa?",
+      "multiple": true,
+      "next": 3,
+      "aswers": [
+        {
+          "id": 4,
+          "orderby": 1,
+          "value": "Curiosidade",
+          "weight": 1
+        },
+        {
+          "id": 5,
+          "orderby": 2,
+          "value": "Tive relação sem me previnir",
+          "weight": 15
+        },
+        {
+          "id": 6,
+          "orderby": 3,
+          "value": "Sinto os sintomas da doença",
+          "weight": 2
+        },
+        {
+          "id": 7,
+          "orderby": 4,
+          "value": "Tenho a H.I.V",
+          "weight": 100
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "orderby": 3,
+      "question": "Você conhece ou já ouviu falar da AIPS",
+      "multiple": false,
+      "next": 4,
+      "aswers": [
+        {
+          "id": 5,
+          "orderby": 1,
+          "value": "Sim",
+          "weight": 1
+        },
+        {
+          "id": 6,
+          "orderby": 2,
+          "value": "Não",
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "orderby": 4,
+      "question": "Você sente algum dos sintomas abaixo?",
+      "multiple": true,
+      "next": 5,
+      "aswers": [
+        {
+          "id": 7,
+          "orderby": 1,
+          "value": "Dor de cabeça",
+          "weight": 1
+        },
+        {
+          "id": 8,
+          "orderby": 2,
+          "value": "Febre",
+          "weight": 1
+        },
+        {
+          "id": 9,
+          "orderby": 3,
+          "value": "Cansaço excessivo",
+          "weight": 1
+        },
+        {
+          "id": 11,
+          "orderby": 3,
+          "value": "Aftas ou feridas nos lábios",
+          "weight": 1
+        },
+        {
+          "id": 12,
+          "orderby": 3,
+          "value": "Feridas genitais",
+          "weight": 3
+        },
+        {
+          "id": 13,
+          "orderby": 3,
+          "value": "Manchas vermelhas na pele",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "orderby": 4,
+      "question": "Você teve contato com outras pessoas desde que surgiu os sintomas?",
+      "multiple": false,
+      "next": 5,
+      "weight": 0,
+      "aswers": [
+        {
+          "id": 14,
+          "orderby": 1,
+          "value": "Sim",
+          "weight": 5
+        },
+        {
+          "id": 15,
+          "orderby": 2,
+          "value": "Não",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "orderby": 5,
+      "question": "Quando ocorreu a última relação sexual?",
+      "multiple": false,
+      "next": 6,
+      "aswers": [
+        {
+          "id": 16,
+          "orderby": 1,
+          "value": "Menos de uma semana",
+          "weight": 4
+        },
+        {
+          "id": 17,
+          "orderby": 2,
+          "value": "Menos de um mês",
+          "weight": 4
+        },
+        {
+          "id": 18,
+          "orderby": 3,
+          "value": "Mais de um mês",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "orderby": 6,
+      "question": "Você tem algum problema de saúde?",
+      "multiple": false,
+      "next": 7,
+      "aswers": [
+        {
+          "id": 19,
+          "orderby": 1,
+          "value": "Sim",
+          "weight": 3
+        },
+        {
+          "id": 20,
+          "orderby": 2,
+          "value": "Não",
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "orderby": 7,
+      "question": "Você tem algum dos hábitos abaixo?",
+      "multiple": true,
+      "next": 8,
+      "aswers": [
+        {
+          "id": 21,
+          "orderby": 1,
+          "value": "Consumo de bebidas alcoólicas",
+          "weight": 3
+        },
+        {
+          "id": 22,
+          "orderby": 2,
+          "value": "Uso de tabaco",
+          "weight": 3
+        },
+        {
+          "id": 23,
+          "orderby": 3,
+          "value": "Drogas ilícitas",
+          "weight": 3
+        },
+        {
+          "id": 24,
+          "orderby": 3,
+          "value": "Uso de medicamentos controlado",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "orderby": 8,
+      "question": "Você já realizou alguma vez o teste de H.I.V?",
+      "multiple": false,
+      "next": 9,
+      "aswers": [
+        {
+          "id": 25,
+          "orderby": 1,
+          "value": "Sim",
+          "weight": 0
+        },
+        {
+          "id": 26,
+          "orderby": 2,
+          "value": "Não",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "orderby": 9,
+      "question": "Você já procurou algum profissonal de saúde?",
+      "multiple": false,
+      "next": 10,
+      "aswers": [
+        {
+          "id": 27,
+          "orderby": 1,
+          "value": "Sim",
+          "weight": 0
+        },
+        {
+          "id": 28,
+          "orderby": 2,
+          "value": "Não",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "orderby": 10,
+      "question": "Já ocorreu algum caso de H.I.V positivo familiar?",
+      "multiple": false,
+      "next": 11,
+      "aswers": [
+        {
+          "id": 29,
+          "orderby": 1,
+          "value": "Sim",
+          "weight": 7
+        },
+        {
+          "id": 30,
+          "orderby": 2,
+          "value": "Não",
+          "weight": 1
+        },
+        {
+          "id": 31,
+          "orderby": 3,
+          "value": "Não sei responder",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "orderby": 11,
+      "question": "A quanto tempo está com sintomas?",
+      "multiple": false,
+      "next": 0,
+      "aswers": [
+        {
+          "id": 32,
+          "orderby": 1,
+          "value": "Menos de uma semana",
+          "weight": 2
+        },
+        {
+          "id": 33,
+          "orderby": 2,
+          "value": "Menos de um mês",
+          "weight": 1
+        },
+        {
+          "id": 34,
+          "orderby": 3,
+          "value": "Mais de um mês",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

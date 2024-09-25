@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      AIPS - Dados pessoais
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h2 class="ion-padding-start ion-padding-end">
+      Precisamos só de mais algumas informações
+    </h2>
+    <ion-list lines="none">
+      <ion-list-header>
+        <h4>Preencha com seus dados</h4>
+      </ion-list-header>
+      <ion-item>
+        <ion-label position="stacked">Seu Nome</ion-label>
+        <ion-input [(ngModel)]="UserActual.name" name="name" type="text" placeholder="Name" ngModel ngDefaultControl
+          required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Data de Nascimento</ion-label>
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="4">
+              <ion-select fixed interface="action-sheet" placeholder="Dia" [(ngModel)]="dateOfBirth.day" ngModel
+                ngDefaultControl>
+                <ion-select-option *ngFor="let d of days" [value]="d">{{d}}</ion-select-option>
+              </ion-select>
+            </ion-col>
+            <ion-col>
+              <ion-select interface="action-sheet" placeholder="Mês" [(ngModel)]="dateOfBirth.month" ngModel
+                ngDefaultControl>
+                <ion-select-option *ngFor="let m of months; let i = index" [value]="i + 1">{{m}}</ion-select-option>
+              </ion-select>
+            </ion-col>
+            <ion-col>
+              <ion-select interface="action-sheet" placeholder="Ano" [(ngModel)]="dateOfBirth.year" ngModel
+                ngDefaultControl>
+                <ion-select-option *ngFor="let y of years" [value]="y">{{y}}</ion-select-option>
+              </ion-select>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Cidade/Estado</ion-label>
+        <ion-item>
+          <ion-select interface="action-sheet" placeholder="Cidade/Estado" [(ngModel)]="UserActual.city" ngModel
+            ngDefaultControl>
+            <ion-select-option value="1">Araguari/MG</ion-select-option>
+            <ion-select-option value="2">Uberaba/MG</ion-select-option>
+            <ion-select-option value="3">Uberlândia/MG</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Gênero</ion-label>
+        <ion-radio-group [(ngModel)]="UserActual.gender">
+          <ion-item>
+            <ion-label>Feminino</ion-label>
+            <ion-radio value="M" slot="start"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Masculino</ion-label>
+            <ion-radio value="F" slot="start"></ion-radio>
+          </ion-item>
+          <ion-item padding>
+            <ion-label>Outros</ion-label>
+            <ion-radio value="O" slot="start" checked></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <p class="ion-padding-start ion-padding-end">
+    <ion-button color="success" expand="block" size="large" (click)="register()">CONCLUIR</ion-button>
+  </p>
+</ion-footer>

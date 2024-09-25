@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      AIPS - Pergunta {{ QuestionActual.orderby }}/{{ Total }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h3 class="ion-padding-start ion-padding-end">
+      {{ QuestionActual.question }}
+    </h3>
+    <ion-item-divider>
+      <h3>
+        <span [hidden]="QuestionActual.multiple">Selecione apenas uma das opções</span>
+        <span [hidden]="!QuestionActual.multiple">Selecione uma ou mais opções</span>
+      </h3>
+    </ion-item-divider>
+
+    <ion-list lines="none">
+      <ion-radio-group [hidden]="QuestionActual.multiple" (ionChange)="addAswer($event)">
+        <ion-item padding *ngFor="let item of QuestionActual.aswers">
+          <ion-label>{{ item.value }}</ion-label>
+          <ion-radio (checked)="item.checked" slot="start" value="{{item.id}}" (ionSelect)="addAswer($event)"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      <div [hidden]="!QuestionActual.multiple">
+        <ion-item  padding *ngFor="let item of QuestionActual.aswers">
+          <ion-checkbox [checked]="item.checked" slot="start" (ionChange)="addAswer($event)" value="{{item.id}}"></ion-checkbox>
+          <ion-label>{{ item.value }}</ion-label>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <p  [hidden]="!QuestionActual.multiple || !canNext" class="ion-padding-start ion-padding-end">
+    <ion-button color="success" expand="block" size="large" (click)="next()">PRÓXIMA</ion-button>
+  </p>
+  <p  [hidden]="QuestionActual.orderby <= 1" class="ion-padding-start ion-padding-end">
+    <ion-button color="primary" expand="block" size="large" (click)="previous()">VOLTAR</ion-button>
+  </p>
+</ion-footer>

@@ -1,0 +1,22 @@
+{
+  "centers": [
+    {
+      "id": 1,
+      "city" : "Araguari/MG",
+      "name": "AIPS - Centro avançado Araguari",
+      "address" : "Av. do Contorno, 2240 3690-3088 2146185 - Gutierrez, MG, 30110-921"
+    },
+    {
+      "id": 2,
+      "city" : "Uberaba/MG",
+      "name": "AIPS - Centro avançado Uberaba",
+      "address" : "R. Dr. Adílson Resende Facure, 344 - Vila Arquelau, Uberaba - MG, 38071-305"
+    },
+    {
+      "id": 3,
+      "city" : "Uberlândia/MG",
+      "name": "AIPS - Centro avançado Uberlândia",
+      "address" : "R. dos Pereiras, 316 - Centro, Uberlândia - MG, 38400-612"
+    }
+  ]
+}

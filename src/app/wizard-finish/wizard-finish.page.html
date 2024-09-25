@@ -1,0 +1,83 @@
+<ion-content [fullscreen]="true">
+  <ion-slides (ionSlideReachEnd)="ionSlideNextEnd()">
+    <ion-slide>
+      <div class="slide">
+        <ion-card-header>Abaixo está o percentual de probabilidade calculada</ion-card-header>
+        <circle-progress [percent]="percent" [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+        </circle-progress>
+        <h2>Orientações</h2>
+        <p class="ion-padding-start ion-padding-end">
+          Seu percentual de chance de estar com o vírus do H.I.V é de <strong>{{ percent }}%</strong>
+        </p>
+        <p class="ion-padding-start ion-padding-end">
+          Arraste para o lado para maiores orientações
+        </p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img width="80%" src="assets/health_center.jpg">
+      <h2>Diagnóstico da Análise</h2>
+      <p class="ion-padding-start ion-padding-end">
+        <ion-list lines="none">
+          <ion-item *ngFor="let item of result">
+            <p class="ion-padding-start ion-padding-end">{{item}}</p>
+          </ion-item>
+        </ion-list>
+      </p>
+    </ion-slide>
+
+    <ion-slide [hidden]="percent <= 30">
+      <ion-list lines="none">
+        <ion-item-divider>
+          <h3>Unidade mais perto de você</h3>
+        </ion-item-divider>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>{{ HealthCenterActual.city }}</ion-card-subtitle>
+            <ion-card-title>
+              <h4>{{ HealthCenterActual.name }}</h4>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ HealthCenterActual.address }}
+          </ion-card-content>
+        </ion-card>
+        <ion-item-divider>
+          <h3>Outras Unidade</h3>
+        </ion-item-divider>
+        <ion-card *ngFor="let item of HealthCenters">
+          <ion-card-header>
+            <ion-card-subtitle>{{ item.city }}</ion-card-subtitle>
+            <ion-card-title>
+              <h4>{{ item.name }}</h4>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ item.address }}
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
+    </ion-slide>
+
+    <ion-slide class="finish-slide">
+      <img width="50%" src="assets/logo.png" class="animate__animated  animate__heartBeat">
+      <h2>Obrigado por escolher a tecnologia AIPS</h2>
+      <p class="ion-padding-start ion-padding-end">
+        Estamos sempre a disposição para você e seu bem estar<br />
+        Conte sempre conosco
+      </p>
+      <div class="ion-padding-start ion-padding-end">
+        <h3>Telefone amigo</h3>
+        <ion-label>0800 999 999 090</ion-label>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-footer [hidden]="!showFinish">
+  <p class="ion-padding-start ion-padding-end">
+    <ion-button color="success" expand="block" size="large" (click)="restart()">REINICIAR</ion-button>
+  </p>
+</ion-footer>
