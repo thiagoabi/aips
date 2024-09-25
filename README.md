@@ -1,1 +1,1 @@
-# Como-criar-tela-de-Splash-no-Ionic-6-sem-usar-plugins-Cordova-ou-Capacitor
+# Projeto escolar - Simulação de um app mobile de perguntas para um projeto escolar da minha filha
